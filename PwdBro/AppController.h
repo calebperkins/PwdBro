@@ -9,15 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface AppController : NSObject {
-    IBOutlet NSMenu* statusMenu;
     IBOutlet NSSecureTextField* passwordField;
     IBOutlet NSTextField* hashOutput;
     IBOutlet NSTextField* addressField;
     IBOutlet NSButton* copyButton;
-    
-    NSStatusItem* statusItem;
-    NSImage* statusImage;
-    NSImage* statusHighlightImage;
+    IBOutlet NSApplication* app;
+    IBOutlet NSWindow* window;
 }
 
 -(IBAction)copyToClipboard:(id)sender;

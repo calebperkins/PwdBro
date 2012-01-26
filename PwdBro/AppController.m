@@ -11,29 +11,22 @@
 
 @implementation AppController
 
--(void) awakeFromNib {
-    return;
-    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-    
-    NSBundle* bundle = [NSBundle mainBundle];
-    statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForImageResource:@"lock-icon"]];
-    statusHighlightImage = statusImage;
-    
-    [statusItem setImage:statusImage];
-    [statusItem setAlternateImage:statusHighlightImage];
-    
-    [statusItem setMenu:statusMenu];
-    [statusItem setToolTip:@"PwdBro"];
-    [statusItem setHighlightMode:YES];
-}
-
 -(IBAction)copyToClipboard:(id)sender {
+    if ([[hashOutput stringValue] length] == 0) {
+        return;
+    }
+    
     NSPasteboard* board = [NSPasteboard generalPasteboard];
     [board clearContents];
     [board writeObjects:[NSArray arrayWithObject:[hashOutput stringValue]]];
+    
+    [copyButton setEnabled:NO];
+    [app hide:sender];
+    [window makeFirstResponder:addressField];
 }
 
 - (void)controlTextDidChange:(NSNotification *)notice {
+    [copyButton setEnabled:YES];
     NSString* hash = [PwdHash getHashedPasswordWithPasswordAndURL:[passwordField stringValue] url:[addressField stringValue]];
     [hashOutput setStringValue:hash];
 }

@@ -7,6 +7,7 @@
 //
 
 #import "CPAppDelegate.h"
+#import "AppController.h"
 
 @implementation CPAppDelegate
 
@@ -14,6 +15,14 @@
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
     return YES;
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+    // Load site file
+}
+
+- (void)applicationWillTerminate:(NSNotification *)notification {
+    // Flush site file
 }
 
 @end

@@ -16,6 +16,7 @@
 		3C7904FC14CCA0F8009316E7 /* PwdHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7904FA14CCA0F8009316E7 /* PwdHash.m */; };
 		3C7904FD14CCA0F8009316E7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C7904FB14CCA0F8009316E7 /* README.md */; };
 		3C937FA714CCADC900C593D8 /* lock.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3C937FA614CCADC900C593D8 /* lock.icns */; };
+		3C9F9E5514D33BBC002854D3 /* SiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9F9E5414D33BBC002854D3 /* SiteList.m */; };
 		3CCB65F114CB83A400FF4C3D /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB65F014CB83A400FF4C3D /* AppController.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,8 @@
 		3C7904FA14CCA0F8009316E7 /* PwdHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PwdHash.m; sourceTree = "<group>"; };
 		3C7904FB14CCA0F8009316E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3C937FA614CCADC900C593D8 /* lock.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = lock.icns; sourceTree = "<group>"; };
+		3C9F9E5314D33BBC002854D3 /* SiteList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteList.h; sourceTree = "<group>"; };
+		3C9F9E5414D33BBC002854D3 /* SiteList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteList.m; sourceTree = "<group>"; };
 		3CCB65EF14CB83A400FF4C3D /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		3CCB65F014CB83A400FF4C3D /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +98,8 @@
 			children = (
 				3C1830C414C66E4500EE05C3 /* CPAppDelegate.h */,
 				3C1830C514C66E4500EE05C3 /* CPAppDelegate.m */,
+				3C9F9E5314D33BBC002854D3 /* SiteList.h */,
+				3C9F9E5414D33BBC002854D3 /* SiteList.m */,
 				3C1830C714C66E4500EE05C3 /* MainWindow.xib */,
 				3C1830B914C66E4500EE05C3 /* Supporting Files */,
 				3CCB65EF14CB83A400FF4C3D /* AppController.h */,
@@ -195,6 +200,7 @@
 				3C1830C614C66E4500EE05C3 /* CPAppDelegate.m in Sources */,
 				3CCB65F114CB83A400FF4C3D /* AppController.m in Sources */,
 				3C7904FC14CCA0F8009316E7 /* PwdHash.m in Sources */,
+				3C9F9E5514D33BBC002854D3 /* SiteList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

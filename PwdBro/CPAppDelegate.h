@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CPAppDelegate : NSObject <NSApplicationDelegate>
+#import "SiteList.h"
+
+@interface CPAppDelegate : NSObject <NSApplicationDelegate> {
+}
 
 @property (assign) IBOutlet NSWindow *window;
 

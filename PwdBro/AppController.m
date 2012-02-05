@@ -11,23 +11,33 @@
 
 @implementation AppController
 
+- (void)awakeFromNib {
+    pasteBoard = [NSPasteboard generalPasteboard];
+}
+
 -(IBAction)copyToClipboard:(id)sender {
     if ([[hashOutput stringValue] length] == 0) {
         return;
     }
     
-    NSPasteboard* board = [NSPasteboard generalPasteboard];
-    [board clearContents];
-    [board writeObjects:[NSArray arrayWithObject:[hashOutput stringValue]]];
+    // Copy to clipboard
+    [pasteBoard clearContents];
+    [pasteBoard writeObjects:[NSArray arrayWithObject:[hashOutput stringValue]]];
     
+    // Hide and disable buttons
     [copyButton setEnabled:NO];
-    [app hide:sender];
-    [window makeFirstResponder:addressField];
+    [NSApp hide:sender];
+    [window makeFirstResponder:addressBox];
+    
+    // Save to address list
+    [sites addSite:[PwdHash extractDomainFromURL:[addressBox stringValue]]];
 }
 
 - (void)controlTextDidChange:(NSNotification *)notice {
     [copyButton setEnabled:YES];
-    NSString* hash = [PwdHash getHashedPasswordWithPasswordAndURL:[passwordField stringValue] url:[addressField stringValue]];
+    
+    NSString* hash = [PwdHash getHashedPasswordWithPasswordAndURL:[passwordField stringValue]
+                                                              url:[addressBox stringValue]];
     [hashOutput setStringValue:hash];
 }
 

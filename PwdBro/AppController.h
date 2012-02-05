@@ -7,14 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SiteList.h"
 
 @interface AppController : NSObject {
     IBOutlet NSSecureTextField* passwordField;
     IBOutlet NSTextField* hashOutput;
-    IBOutlet NSTextField* addressField;
+    IBOutlet NSComboBox* addressBox;
     IBOutlet NSButton* copyButton;
-    IBOutlet NSApplication* app;
     IBOutlet NSWindow* window;
+    IBOutlet SiteList* sites;
+    
+    @private
+    NSPasteboard* pasteBoard;
 }
 
 -(IBAction)copyToClipboard:(id)sender;

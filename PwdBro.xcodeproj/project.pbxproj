@@ -157,7 +157,7 @@
 		3C1830A514C66E4400EE05C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 3C1830A814C66E4400EE05C3 /* Build configuration list for PBXProject "PwdBro" */;
 			compatibilityVersion = "Xcode 3.2";

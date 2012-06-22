@@ -14,6 +14,7 @@
     sites = [NSMutableOrderedSet new];
     [self addSite:@"apple.com"];
     [self addSite:@"google.com"];
+    [self addSite:@"battle.net"];
 }
 
 - (void)addSite:(NSString*)site {

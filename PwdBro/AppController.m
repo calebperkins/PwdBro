@@ -24,8 +24,7 @@
     [pasteBoard clearContents];
     [pasteBoard writeObjects:[NSArray arrayWithObject:[hashOutput stringValue]]];
     
-    // Hide and disable buttons
-    [copyButton setEnabled:NO];
+    // Hide buttons
     [NSApp hide:sender];
     [window makeFirstResponder:addressBox];
     
@@ -33,9 +32,7 @@
     [sites addSite:[PwdHash extractDomainFromURL:[addressBox stringValue]]];
 }
 
-- (void)controlTextDidChange:(NSNotification *)notice {
-    [copyButton setEnabled:YES];
-    
+- (void)controlTextDidChange:(NSNotification *)notice {    
     NSString* hash = [PwdHash getHashedPasswordWithPasswordAndURL:[passwordField stringValue]
                                                               url:[addressBox stringValue]];
     [hashOutput setStringValue:hash];

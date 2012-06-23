@@ -3,7 +3,7 @@
 //  PwdBro
 //
 //  Created by Caleb Perkins on 1/17/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Caleb Perkins. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

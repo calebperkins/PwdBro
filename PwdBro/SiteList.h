@@ -16,5 +16,6 @@
 
 extern NSString* const DomainsKey;
 - (void)addSite:(NSString*)site;
+- (void)removeDomains:(NSIndexSet*)indexes;
 
 @end

@@ -16,11 +16,13 @@
     IBOutlet NSButton* copyButton;
     IBOutlet NSWindow* window;
     IBOutlet SiteList* sites;
+    IBOutlet NSTableView* domainList;
     
     @private
     NSPasteboard* pasteBoard;
 }
 
 -(IBAction)copyToClipboard:(id)sender;
+-(IBAction)removeDomains:(id)sender;
 
 @end

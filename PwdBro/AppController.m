@@ -39,4 +39,10 @@
     [hashOutput setStringValue:hash];
 }
 
+-(IBAction)removeDomains:(id)sender {
+    if ([domainList selectedRow] == -1) return;
+    [sites removeDomains:[domainList selectedRowIndexes]];
+    [domainList reloadData];
+}
+
 @end

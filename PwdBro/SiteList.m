@@ -22,6 +22,11 @@ NSString* const DomainsKey = @"domains";
     [defaults setObject:[sites array] forKey:DomainsKey];
 }
 
+- (void)removeDomains:(NSIndexSet*)indexes {
+    [sites removeObjectsAtIndexes:indexes];
+    [defaults setObject:[sites array] forKey:DomainsKey];
+}
+
 #pragma mark Data Source
 
 // Autocomplete domain
@@ -46,6 +51,18 @@ NSString* const DomainsKey = @"domains";
 
 - (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox {
     return [sites count];
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
+    return [sites count];
+}
+
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
+    return [sites objectAtIndex:rowIndex];
+}
+
+- (void)tableView:(NSTableView *)aTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
+    [sites replaceObjectAtIndex:rowIndex withObject:anObject];
 }
 
 @end

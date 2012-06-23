@@ -35,6 +35,7 @@
 - (void)controlTextDidChange:(NSNotification *)notice {    
     NSString* hash = [PwdHash getHashedPasswordWithPasswordAndURL:[passwordField stringValue]
                                                               url:[addressBox stringValue]];
+    [copyButton setEnabled:([hash length] > 0)];
     [hashOutput setStringValue:hash];
 }
 

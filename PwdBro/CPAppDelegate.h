@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SiteList.h"
-
 @interface CPAppDelegate : NSObject <NSApplicationDelegate> {
 }
 

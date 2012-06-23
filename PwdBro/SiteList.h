@@ -10,9 +10,11 @@
 
 @interface SiteList : NSObject {
     @private
-    NSMutableOrderedSet* sites;
+    NSMutableArray* sites;
+    NSUserDefaults* defaults;
 }
 
+extern NSString* const DomainsKey;
 - (void)addSite:(NSString*)site;
 
 @end

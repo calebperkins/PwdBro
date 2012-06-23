@@ -20,7 +20,6 @@ NSString* const DomainsKey = @"domains";
 - (void)addSite:(NSString*)site {
     [sites addObject:site];
     [defaults setObject:[sites array] forKey:DomainsKey];
-    [defaults synchronize];
 }
 
 #pragma mark Data Source

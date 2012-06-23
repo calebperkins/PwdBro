@@ -14,15 +14,12 @@ NSString* const DomainsKey = @"domains";
 
 - (void)awakeFromNib {
     defaults = [NSUserDefaults standardUserDefaults];
-    sites = [[defaults arrayForKey:DomainsKey] mutableCopy];
-    if (!sites) {
-        sites = [NSMutableArray new];
-    }
+    sites = [[NSOrderedSet orderedSetWithArray:[defaults arrayForKey:DomainsKey]] mutableCopy];
 }
 
 - (void)addSite:(NSString*)site {
     [sites addObject:site];
-    [defaults setObject:sites forKey:DomainsKey];
+    [defaults setObject:[sites array] forKey:DomainsKey];
     [defaults synchronize];
 }
 

@@ -10,7 +10,7 @@
 
 @interface SiteList : NSObject {
     @private
-    NSMutableArray* sites;
+    NSMutableOrderedSet* sites;
     NSUserDefaults* defaults;
 }
 
